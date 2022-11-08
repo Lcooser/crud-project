@@ -7,6 +7,12 @@
     
     <h1><%= title %></h1>
 
+    <%- include('partials/navbar.ejs') %>
+
+    <% if (typeof messagee !== 'undefined') {%>
+            <%= message %>
+    <% } %>
+
     <form action="/register/add" method="POST">
         <div>
             <label>Name</label>
