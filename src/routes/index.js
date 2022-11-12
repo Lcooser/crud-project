@@ -14,8 +14,10 @@ router.post('/register/add', CustomersController.add)
 
 
 //list users
-router.get('/list', CustomersController.listUsers)
+router.get('/list', CustomersController.list)
 
-
+// edit
+router.get('/edit', CustomersController.formEdit)
+//router.post('/edit', CustomersController.edit)
 
 module.exports = router

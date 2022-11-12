@@ -1,0 +1,40 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include('partials/head.ejs') %>
+<body>
+    
+    <h1><%= title %></h1>
+
+    <%- include('partials/navbar.ejs') %>
+
+    <% if (typeof messagee !== 'undefined') {%>
+            <%= message %>
+    <% } %>
+
+    <form action="/edit" method="POST">
+        <div>
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Type your name" value="<%=user.name%>">
+        </div>
+        <div>
+            <label>Age</label>
+            <input type="text" name="age" placeholder="Type your age" >
+        </div>
+        <div>
+            <label>E-mail</label>
+            <input type="text" name="email" placeholder="Type your e-mail">
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="text" name="password" placeholder="Type your password">
+        </div>
+        <button type="submit">Edit</button>
+    </form>
+
+    <%- include('partials/foot.ejs') %>
+</body> 
+</html>
